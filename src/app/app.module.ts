@@ -8,6 +8,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TestComponent } from './test/test.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

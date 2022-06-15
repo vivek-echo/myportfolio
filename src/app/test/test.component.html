@@ -1,26 +1,113 @@
-<!DOCTYPE html>
-<!--Code by Divinector - divinectorweb.com-->
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>animated background with pure css and html</title>
-	<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
-	
-</head>
-<body>
-	<div class="banner-text">
-		
-		<h2>Welcome to our Website</h2>
-	</div>
-	<div class="animation-area">
-		<ul class="box-area">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-</body>
+<html>
+  <head>
+    <script  src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger)
+      
+      export default {
+        methods: {
+          changePanelOnScroll() {
+            // init a time line - a sequence of animation
+            let tl = gsap.timeline()
+            // create animation for the 4 panel
+            tl.from(this.$refs.yellow, {
+              yPercent: 100
+              })
+              .from(this.$refs.orange, {
+              yPercent: -100
+              })
+              .from(this.$refs.pink, {
+              xPercent: 100
+              })
+              .from(this.$refs.purple, {
+                xPercent: -100
+              })
+            // create a separate ScrollTrigger option
+            ScrollTrigger.create({
+              animation: tl,
+              trigger: this.$refs.viewer,
+              start: "top top",
+              end: "+=6000",
+              pin: true,
+              scrub: true
+            })
+          }
+        },
+        mounted () {
+          this.changePanelOnScroll()
+        }
+      };
+      </script>
+
+
+<style lang="scss">
+  
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.viewer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.panel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Helvetica";
+  font-size: 7rem;
+  color: white;
+}
+.panel--grey {
+  background: rgb(212,204,194);
+background: radial-gradient(circle, rgba(212,204,194,1) 0%, rgba(129,123,117,0.7) 61%);
+  padding: 0 3rem;
+}
+  
+  h1 {
+    background: rgb(242,204,12);
+background: linear-gradient(29deg, rgba(242,204,12,1) 0%, rgba(242,142,19,1) 28%, rgba(242,75,106,1) 63%, rgba(186,104,219,1) 100%);
+    -webkit-text-stroke: 5px white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13rem;
+  }
+
+
+.panel--yellow {
+ background-color: yellow;
+}
+
+.panel--orange {
+  background-color: orange;
+}
+
+.panel--pink {
+    background-color: pink;
+  }
+.panel--purple {
+  background-color: purple;
+  }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="viewer" ref="viewer">
+        <section class="panel panel--grey" ref="grey"><h1>Change panel on scroll</h1> </section>
+      <section class="panel panel--yellow" ref="yellow"> YELLOW! </section>
+      <section class="panel panel--orange" ref="orange"> ORANGE! </section>
+      <section class="panel panel--pink" ref="pink"> PINK! </section>
+      <section class="panel panel--purple" ref="purple"> PURPLE! </section>
+      </div>
+    </div>
+  </body>
 </html>
