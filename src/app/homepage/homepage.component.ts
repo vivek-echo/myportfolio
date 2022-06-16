@@ -14,13 +14,9 @@ export class HomepageComponent implements OnInit {
 scrWidth:any;
 
   ngOnInit(): void {
-    
-    
-
     $('.imgsection').hide();
     $('.imgsection').animate(
       {
-        
         top: '200px',
         width: '11.5rem',
         height: '11.5rem',
@@ -28,8 +24,6 @@ scrWidth:any;
       500
     );
     
-   
-   
     $('.imgsection').hover(
       function () {
         $('.imgsection').css('transform', 'scale(1.3)');
@@ -63,12 +57,7 @@ scrWidth:any;
 
     $(".imgsection").show(1000);
     $(".imgsection").fadeIn(1000);
-
     $(".avatar").fadeIn(1000);
-
-
-    
-
   }
 
   clickAbout(){
