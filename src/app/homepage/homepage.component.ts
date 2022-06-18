@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+// import { off } from 'process';
 // import * as $ from 'jquery';
 declare const $ : any;
 
@@ -14,21 +15,24 @@ export class HomepageComponent implements OnInit {
 scrWidth:any;
 
   ngOnInit(): void {
+    // this.scrolling();
+    // this.paralex();
+    // this.secAnimation();
+    // this.initHeader();
     $('.imgsection').hide();
     $('.imgsection').animate(
       {
-        top: '200px',
+        top: '100px',
         width: '11.5rem',
         height: '11.5rem',
       },
-      500
+      800
     );
     
     $('.imgsection').hover(
       function () {
         $('.imgsection').css('transform', 'scale(1.3)');
         $('.imgsection').css('transition', '.5s');
-        
         $('#prode').show();
         $('.imgsection').css('border-radius', '9px');
         const scrWidth =parseInt( $('.section1').css('width'));
@@ -65,6 +69,36 @@ scrWidth:any;
       scrollTop: $(".section2").offset().top
   }, 200);
   }
+
+  paralex(){
+    var initScrollTop = $(window).scrollTop();
+    $("#parallax1").css({'background-position-y' : (initScrollTop/75)+'%'});
+    $(window).scroll(function() {
+    
+      // Find the new scroll top.
+      var scrollTop = $(window).scrollTop();
+      
+      // Set the new background position.
+      $("#parallax1").css({'background-position-y' : (scrollTop/75)+'%'});
+      // $(".content").css({'background-position-y' : (scrollTop/75)+'%'});
+      
+    });
+  }
+
+  scrolling(){
+    const parallax =$(".section1") ;
+    window.addEventListener("scroll",function(){
+      let offset=window.pageYOffset;
+      console.log(offset);
+      // $(parallax).css({'background-position-y' : (offset/75)+'%'});
+    
+     
+    })
+  }
+
+ 
+
+  
   
 
 }
