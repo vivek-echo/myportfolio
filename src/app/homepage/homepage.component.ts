@@ -11,7 +11,7 @@ declare const $ : any;
 })
 export class HomepageComponent implements OnInit {
   constructor() {}
- 
+
 scrWidth:any;
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ scrWidth:any;
       },
       800
     );
-    
+
     $('.imgsection').hover(
       function () {
         $('.imgsection').css('transform', 'scale(1.3)');
@@ -47,7 +47,7 @@ scrWidth:any;
           $('.imgsection').css('height', '27rem');
           // $('#prode').css('left', '1rem');
         }
-        
+
       },
       function () {
         $('.imgsection').css('transform', 'scale(1)');
@@ -72,16 +72,25 @@ scrWidth:any;
 
   paralex(){
     var initScrollTop = $(window).scrollTop();
-    $("#parallax1").css({'background-position-y' : (initScrollTop/75)+'%'});
+
     $(window).scroll(function() {
-    
+
       // Find the new scroll top.
       var scrollTop = $(window).scrollTop();
-      
-      // Set the new background position.
-      $("#parallax1").css({'background-position-y' : (scrollTop/75)+'%'});
-      // $(".content").css({'background-position-y' : (scrollTop/75)+'%'});
-      
+      console.log(scrollTop);
+
+      if(scrollTop > 10)
+      {
+        $('.yyyy').fadeOut();
+      }
+
+      if(scrollTop < 10)
+      {
+        $('.yyyy').fadeIn();
+      }
+
+
+
     });
   }
 
@@ -90,15 +99,27 @@ scrWidth:any;
     window.addEventListener("scroll",function(){
       let offset=window.pageYOffset;
       console.log(offset);
+
+      if(offset > 10)
+      {
+        $('.yyyy').fadeOut();
+      }
+
+      if(offset < 10)
+      {
+        $('.yyyy').fadeIn();
+      }
+
+
       // $(parallax).css({'background-position-y' : (offset/75)+'%'});
-    
-     
+
+
     })
   }
 
- 
 
-  
-  
+
+
+
 
 }
