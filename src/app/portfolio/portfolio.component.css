@@ -1,29 +1,33 @@
-
-nav{
+nav {
   margin-top: 30px;
 }
 
-.sayHello{
+.sayHello {
   background-color: #FFFF;
   border-width: 2px;
-  border-color:  #7510F7;
+  border-color: #8942a8;
   font-family: "europa", sans-serif;
   border-radius: 9999px;
-  padding : 6px;
+  padding: 6px;
   font-size: 18px;
   width: 120px;
-  color:#7510F7 ;
+  color: #8942a8;
 }
 
-.sayHello:hover{
-  background-color:#7510F7;
+.logoImage {
+  width: 80px;
+}
+
+.sayHello:hover {
+  background-color: #8942a8;
   /* background-color: #008CBA; */
   color: white;
 }
-.heading
-{
+
+.heading {
   margin-top: 120px;
 }
+
 .title {
   line-height: 1.125;
   font-family: "eurostile", sans-serif;
@@ -31,20 +35,21 @@ nav{
   word-break: break-word;
 }
 
-.subtitle{
+.subtitle {
   line-height: 1.5;
   font-family: "europa", sans-serif;
   /* font-weight: 200; */
   word-break: break-word;
 }
 
-.parent{
+.parent {
   display: flex;
-/* align-items: center; */
-justify-content: center;
+  /* align-items: center; */
+  justify-content: center;
 }
+
 .imgsection {
-  position: absolute;
+  /* position: absolute; */
   border: 3px solid #eeaffd;
   border-radius: 50%;
   height: 13rem;
@@ -57,16 +62,55 @@ justify-content: center;
 
 #proimage {
   /* position: absolute; */
-margin-top: 14.5px;
+  margin-top: 14.5px;
 }
+
 #prode {
   display: none;
-  position: absolute;
+  /* position: absolute; */
 }
 
 #prode h5 {
   color: #fff;
 }
 
+#heroSvg {
+  /* width: 1200px; */
+  /* height: 40px; */
+  display: flex;
+  justify-content: center;
+}
 
+.profileSec {
+  position: relative;
 
+  height: 550px;
+  background-color: #8942a8;
+  margin-bottom: 1000px;
+}
+
+.profileSec h1 {
+  margin-top: 70px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem !important;
+  font-family: "eurostile", sans-serif;
+}
+
+.profileSec h5 {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "europa", sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.card {
+  margin-top: 80px;
+  border-radius: 10px;
+  /* height: 400px; */
+}
+
+/* .cardbody1{
+  height: 370px;
+ } */
