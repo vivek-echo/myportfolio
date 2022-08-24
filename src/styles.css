@@ -4,4 +4,6 @@
 body { margin: 0 !important;
   font-family:'Poppins', sans-serif;
   padding: 0 !important;
-  box-sizing: border-box !important; }
+  box-sizing: border-box !important;
+  transition: .5s ease;
+}

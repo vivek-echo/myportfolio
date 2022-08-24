@@ -72,7 +72,7 @@ nav {
   position: absolute;
 }
 
-#prode h5 {
+#prode > h5 {
   color: #fff;
 }
 
@@ -84,11 +84,12 @@ nav {
 }
 
 .profileSec {
-  position: relative;
+  /* position: relative; */
 
   height: 550px;
   background-color: #6e07f3;
-  margin-bottom: 1000px;
+  /* margin-bottom: 1000px; */
+  /* margin-bottom: 100px; */
 }
 
 .profileSecDiv > h1 {
@@ -99,7 +100,7 @@ nav {
   /* font-family: "eurostile", sans-serif; */
 }
 
-.profileSec h5 {
+.profileSecDiv > h5 {
   margin-top: 20px;
   color: #fff;
   /* font-family: "europa", sans-serif; */
@@ -107,8 +108,12 @@ nav {
   font-weight: 300;
 }
 
+.services {
+  margin-top: -270px;
+}
+
 .card {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   border-radius: 10px;
   /* height: 400px; */
 }
@@ -163,3 +168,87 @@ nav {
   color: black;
   font-size: 50px;
  }
+ .collaborating > h4{
+  /* margin-top: 100px; */
+ }
+ .collaborating > h6{
+  margin-top: 20px;
+ }
+
+ .startConv{
+  background-color: #FFFF;
+  border: 2px solid #6e07f3;
+  border-radius: 9999px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  width: 300px;
+  color: #6e07f3;
+  margin-top: 60px;
+  font-weight: 600;
+ }
+
+ .startConv:hover {
+  background-color: #6e07f3;
+  /* background-color: #008CBA; */
+  color: white;
+}
+
+.startConvHr{
+  margin-top: 80px;
+}
+
+.footer{
+  /* position: relative; */
+  bottom: 0;
+  background-color: #6e07f3;
+}
+
+.logoFooter{
+  /* margin-top: 200px; */
+  /* height: 150px; */
+  width: 60px;
+}
+
+.section-padding {
+  padding: 0 0 50px;
+}
+
+.logoFooter img{
+  /* margin-top: 200px; */
+  width: 100%;
+  height: auto;
+}
+.footerCard{
+  margin: 0 100px;
+  position: relative;
+  /* bottom: -75px; */
+  bottom: 60px;
+  padding: 30px 0;
+  /* margin: 0 auto; */
+  border-radius: 30px;
+  background-color: #141C3A;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.letsDOButton{
+  border:2px solid #5BE9B9;
+  border-radius: 50px;
+  padding: 5px 40px 10px;
+  color: #5BE9B9;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s ease;
+
+}
+
+.letsDOButton:hover, .letsDOButton:focus {
+  background-color: #5BE9B9;
+  color: #247559;
+  box-shadow: 0px 0px 6px 5px #adff2f61;
+  -webkit-box-shadow: 0px 0px 6px 5px #adff2f61;
+
+}
