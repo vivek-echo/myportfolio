@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import './../../../assets/js/smtp.js';
- let Email: any;
+let Email: any;
 // import ‘./../../../assets/js/smtp.js’;
 declare const $: any;
 
@@ -16,38 +16,39 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
 
-    $('#desktop').fadeIn(1000)
-    $('#heroSvgImgMob').hide();
+
+    $('.fullbody').fadeIn(1500);
+
     $('#heroSvgImgWeb').hide();
-    $(".linkdenIcon").hover(function(){
+    $(".linkdenIcon").hover(function () {
       $(".linkdenIcon").css("background-color", "white");
       $(".linkdenIcon").css("transition", ".5s ease");
       $(".bi-linkedin").css("color", "#7330cb");
-      }, function(){
-        $(".linkdenIcon").css("background-color", "#7330cb");
-        $(".bi-linkedin").css("color", "white");
+    }, function () {
+      $(".linkdenIcon").css("background-color", "#7330cb");
+      $(".bi-linkedin").css("color", "white");
     });
-    $(".githubIcon").hover(function(){
+    $(".githubIcon").hover(function () {
       $(".githubIcon").css("background-color", "white");
       $(".githubIcon").css("transition", ".5s ease");
       $(".bi-github").css("color", "#7330cb");
-      }, function(){
-        $(".githubIcon").css("background-color", "#7330cb");
-        $(".bi-github").css("color", "white");
+    }, function () {
+      $(".githubIcon").css("background-color", "#7330cb");
+      $(".bi-github").css("color", "white");
     });
 
-    $(".instaIcon").hover(function(){
+    $(".instaIcon").hover(function () {
       $(".instaIcon").css("background-color", "white");
       $(".instaIcon").css("transition", ".5s ease");
       $(".bi-instagram").css("color", "#7330cb");
-      }, function(){
-        $(".instaIcon").css("background-color", "#7330cb");
-        $(".bi-instagram").css("color", "white");
+    }, function () {
+      $(".instaIcon").css("background-color", "#7330cb");
+      $(".bi-instagram").css("color", "white");
     });
 
     const widthScreen = $(window).width();
     if (widthScreen > 800) {
-      $('.services').css('margin-top','-270px')
+      $('.services').css('margin-top', '-270px')
       $('.imgsection').hover(
         function () {
           $('.imgsection').css('transform', 'scale(1.3)');
@@ -60,13 +61,6 @@ export class PortfolioComponent implements OnInit {
           $('#prode').css('top', '10px');
           $('#prode').css('left', '14rem');
           $('#prode').css('width', '22rem');
-
-          // else{
-          //   $('.imgsection').css('width', '16rem');
-          //   $('.imgsection').css('height', '27rem');
-          //   // $('#prode').css('left', '1rem');
-          // }
-
         },
         function () {
           $('.imgsection').css('transform', 'scale(1)');
@@ -79,28 +73,30 @@ export class PortfolioComponent implements OnInit {
       );
     }
 
-    if (widthScreen < 900) {
-      $('#heroSvgImgMob').show();
-      // $('.profileSec').css('height', '700px');
-      // $('.cardbody1').css('border-bottom', '1px solid grey')
-      // $('.cardbody2').css('border-bottom', '1px solid grey')
-
-    } else {
-      $('#heroSvgImgWeb').show();
+    if (widthScreen > 900) {
       $('.cardbody1').css('border-right', '1px solid grey')
       $('.cardbody2').css('border-right', '1px solid grey')
     }
+    this.scroll(widthScreen);
+  }
+
+  scroll(e: any) {
+    const widthScreen = e;
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > 300) {
+        $('#heroSvgImgWeb').fadeIn(1800);
+      }
+      if (scrollTop > 700) {
+        $('.profileSec').fadeIn(1000);
+        $('.services').fadeIn(1000);
+      }
+      // if (scrollTop > 1900) {
+      //   $('.footer').fadeIn(1000);
+      // }
+
+    });
 
   }
-  email() {
-    Email.send({
-      Host: 'smtp.elasticemail.com',
-      Username: 'udith.vivekjha0151@gmail.com',
-      Password: 'C4EDC76AF01DE49850CAFF908C8EAD3369EE',
-      To: 'udith.vivekjha0151@gmail.com',
-      From: 'udith.vivekranjan9431372083@gmai.com',
-      Subject: 'test',
-      Body: 'hellloooooo'
-    }).then((message: any) => { alert(message); });
-  }
+
 }
