@@ -132,15 +132,11 @@ nav {
 }
 
 .cardbody2>h3 {
-
   font-weight: 700;
 }
-
 .cardbody3>h3 {
-
   font-weight: 700;
 }
-
 
 .biTerminal {
   position: absolute;
@@ -162,8 +158,6 @@ nav {
   font-size: 50px;
 }
 
-
-
 .collaborating>h6 {
   margin-top: 20px;
 }
@@ -183,7 +177,6 @@ nav {
 
 .startConv:hover {
   background-color: #7330cb;
-  /* background-color: #008CBA; */
   color: white;
 }
 
@@ -238,14 +231,12 @@ nav {
   transition: .3s ease;
 
 }
-
 .letsDOButton:hover,
 .letsDOButton:focus {
   background-color: #5BE9B9;
   color: #247559;
   box-shadow: 0px 0px 6px 5px #adff2f61;
   -webkit-box-shadow: 0px 0px 6px 5px #adff2f61;
-
 }
 
 .linkdenIcon,
