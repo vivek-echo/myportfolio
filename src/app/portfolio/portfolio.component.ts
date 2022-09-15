@@ -10,15 +10,44 @@ declare const $: any;
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+
     $('#desktop').fadeIn(1000)
     $('#heroSvgImgMob').hide();
     $('#heroSvgImgWeb').hide();
+    $(".linkdenIcon").hover(function(){
+      $(".linkdenIcon").css("background-color", "white");
+      $(".linkdenIcon").css("transition", ".5s ease");
+      $(".bi-linkedin").css("color", "#7330cb");
+      }, function(){
+        $(".linkdenIcon").css("background-color", "#7330cb");
+        $(".bi-linkedin").css("color", "white");
+    });
+    $(".githubIcon").hover(function(){
+      $(".githubIcon").css("background-color", "white");
+      $(".githubIcon").css("transition", ".5s ease");
+      $(".bi-github").css("color", "#7330cb");
+      }, function(){
+        $(".githubIcon").css("background-color", "#7330cb");
+        $(".bi-github").css("color", "white");
+    });
+
+    $(".instaIcon").hover(function(){
+      $(".instaIcon").css("background-color", "white");
+      $(".instaIcon").css("transition", ".5s ease");
+      $(".bi-instagram").css("color", "#7330cb");
+      }, function(){
+        $(".instaIcon").css("background-color", "#7330cb");
+        $(".bi-instagram").css("color", "white");
+    });
 
     const widthScreen = $(window).width();
     if (widthScreen > 800) {
+      $('.services').css('margin-top','-270px')
       $('.imgsection').hover(
         function () {
           $('.imgsection').css('transform', 'scale(1.3)');
