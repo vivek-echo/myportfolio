@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SayHelloComponent } from './sayHello/say-hello.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    SayHelloComponent
   ],
   imports: [
     BrowserModule,

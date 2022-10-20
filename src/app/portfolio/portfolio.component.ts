@@ -17,7 +17,7 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
 
 
-    $('.fullbody').fadeIn(1500);
+    $('.fullbody').fadeIn(1000);
 
     $('#heroSvgImgWeb').hide();
     $(".linkdenIcon").hover(function () {

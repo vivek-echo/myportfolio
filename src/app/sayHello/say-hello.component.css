@@ -1,0 +1,35 @@
+.logoImage {
+  width: 80px;
+}
+
+.bi-arrow-clockwise{
+  padding: 40px;
+  color:#7330cb;
+  font-size:30px;
+}
+
+.bi-x{
+  color:#7330cb;
+  font-size:40px;
+}
+.imgProfile{
+
+  position: relative;
+  /* overflow: hidden; */
+}
+
+hr.position-line {
+  position: relative;
+  bottom: 65px;
+  z-index: -1;
+}
+.imgSayheloDiv{
+  position: relative;
+  bottom: 39px;
+  right: 18px;
+
+}
+.imgSayhelo{
+  height: 8rem;
+  width: 8rem;
+}
