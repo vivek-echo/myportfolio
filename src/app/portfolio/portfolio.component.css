@@ -1,6 +1,3 @@
-/* .fullbody{
-  background-color: #f0f0ff;
-} */
 nav {
   margin-top: 30px;
 }
@@ -23,17 +20,17 @@ nav {
 }
 
 .logoImage {
-  width: 80px;
+  width: 5rem;
 }
 
 .sayHello:hover {
   background-color: #3e1279;
-    color: white;
-    border-color: #3e1279;
+  color: white;
+  border-color: #3e1279;
 }
 
 .heading {
-  margin-top: 120px;
+  padding-top: 120px
 }
 
 .title {
@@ -49,8 +46,8 @@ nav {
 
 .parent {
   display: flex;
-  padding-top: 55px;
   justify-content: center;
+  padding-top: 50px;
 }
 
 .imgsection {
@@ -63,9 +60,7 @@ nav {
 }
 
 #proimage {
-  height: 13rem;
-  width: 13rem;
-  margin-top: 14.5px;
+  width: 14rem;
 }
 
 #prode {
@@ -79,17 +74,10 @@ nav {
 }
 
 .welcome-section {
-  height: 70vh;
+  height: 84vh;
   display: block;
 }
 
-#heroSvg {
-
-  display: flex;
-  width: 100%;
-  height: 600px;
-
-}
 
 .profileSec {
   height: 550px;
@@ -266,4 +254,12 @@ nav {
 .bi-github,
 .bi-instagram {
   color: white;
+}
+
+#heroImg1 {
+  width: 40rem;
+}
+
+#heroImg2 {
+  width: 40rem;
 }

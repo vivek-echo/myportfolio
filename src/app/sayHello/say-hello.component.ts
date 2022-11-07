@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare const $: any;
 
 @Component({
   selector: 'app-say-hello',
@@ -10,6 +11,7 @@ export class SayHelloComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $('.position-relative').fadeIn(1000);
   }
 
 }

@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import './../../../assets/js/smtp.js';
-let Email: any;
-// import ‘./../../../assets/js/smtp.js’;
 declare const $: any;
 
 @Component({
@@ -15,10 +12,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-
     $('.fullbody').fadeIn(1000);
-
     $('#heroSvgImgWeb').hide();
     $(".linkdenIcon").hover(function () {
       $(".linkdenIcon").css("background-color", "white");
@@ -84,10 +78,8 @@ export class PortfolioComponent implements OnInit {
     const widthScreen = e;
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
-      if (scrollTop > 300) {
-        $('#heroSvgImgWeb').fadeIn(1800);
-      }
-      if (scrollTop > 700) {
+
+      if (scrollTop > 400) {
         $('.profileSec').fadeIn(1000);
         $('.services').fadeIn(1000);
       }
