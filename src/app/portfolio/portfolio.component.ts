@@ -39,6 +39,8 @@ export class PortfolioComponent implements OnInit {
       $(".instaIcon").css("background-color", "#7330cb");
       $(".bi-instagram").css("color", "white");
     });
+    $('.profileSec').fadeIn(1000);
+    $('.services').fadeIn(1000);
 
     const widthScreen = $(window).width();
     if (widthScreen > 800) {
@@ -79,9 +81,12 @@ export class PortfolioComponent implements OnInit {
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
 
-      if (scrollTop > 400) {
-        $('.profileSec').fadeIn(1000);
-        $('.services').fadeIn(1000);
+      if (scrollTop > 0) {
+       $('.scDownIcon').hide();
+      }
+      if (scrollTop == 0)
+      {
+        $('.scDownIcon').show();
       }
       // if (scrollTop > 1900) {
       //   $('.footer').fadeIn(1000);
