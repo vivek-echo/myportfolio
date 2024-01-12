@@ -12,6 +12,7 @@ export class PortfolioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $('.profileSec').hide();
     $('.fullbody').fadeIn(1000);
     $('#heroSvgImgWeb').hide();
     $(".linkdenIcon").hover(function () {
@@ -39,8 +40,8 @@ export class PortfolioComponent implements OnInit {
       $(".instaIcon").css("background-color", "#7330cb");
       $(".bi-instagram").css("color", "white");
     });
-    $('.profileSec').fadeIn(1000);
-    $('.services').fadeIn(1000);
+    // $('.profileSec').fadeIn(1000);
+    // $('.services').fadeIn(1000);
 
     const widthScreen = $(window).width();
     if (widthScreen > 800) {
@@ -82,11 +83,13 @@ export class PortfolioComponent implements OnInit {
       var scrollTop = $(window).scrollTop();
 
       if (scrollTop > 0) {
-       $('.scDownIcon').hide();
+       $('.scDownIcon').fadeOut();
+       $('.profileSec').fadeIn(1000);
+       $('.services').fadeIn(1000);
       }
       if (scrollTop == 0)
       {
-        $('.scDownIcon').show();
+        $('.scDownIcon').fadeIn();
       }
       // if (scrollTop > 1900) {
       //   $('.footer').fadeIn(1000);
